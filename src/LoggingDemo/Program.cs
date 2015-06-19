@@ -44,7 +44,13 @@ namespace LoggingDemo
                     scan.TheCallingAssembly();
                     scan.WithDefaultConventions();
                 });
+
+                // no longer used, but kept as a default
                 For<ILog>().Use(() => new ConsoleLogger("All"));
+
+                // shown for clarity; can be removed since WithDefaultConventions() is used
+                For<IDataLogger>().Use<DataLogger>();
+                For<IUILogger>().Use<UILogger>();
             }
         }
     }

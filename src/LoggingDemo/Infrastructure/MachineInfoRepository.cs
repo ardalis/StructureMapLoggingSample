@@ -6,9 +6,9 @@ namespace LoggingDemo.Infrastructure
 {
     public class MachineInfoRepository : IMachineInfoRepository
     {
-        private readonly ILog _logger;
+        private readonly IDataLogger _logger;
 
-        public MachineInfoRepository(ILog logger)
+        public MachineInfoRepository(IDataLogger logger)
         {
             _logger = logger;
         }

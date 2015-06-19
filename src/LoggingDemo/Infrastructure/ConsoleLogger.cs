@@ -17,4 +17,18 @@ namespace LoggingDemo.Infrastructure
             Console.WriteLine("[{0}] {1}", _loggerLevel, message);
         }
     }
+
+    public class UILogger : ConsoleLogger, IUILogger
+    {
+        public UILogger() : base("UI")
+        {
+        }
+    }
+
+    public class DataLogger : ConsoleLogger, IDataLogger
+    {
+        public DataLogger() : base("Data")
+        {
+        }
+    }
 }

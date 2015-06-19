@@ -5,10 +5,10 @@ namespace LoggingDemo.UI
 {
     public class WelcomePage
     {
-        private readonly ILog _logger;
+        private readonly IUILogger _logger;
         private readonly IMachineInfoRepository _machineInfoRepository;
 
-        public WelcomePage(ILog logger, IMachineInfoRepository machineInfoRepository)
+        public WelcomePage(IUILogger logger, IMachineInfoRepository machineInfoRepository)
         {
             _logger = logger;
             _machineInfoRepository = machineInfoRepository;

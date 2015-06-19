@@ -4,4 +4,12 @@
     {
         void Log(string message);
     }
+
+    public interface IDataLogger : ILog
+    {
+    }
+
+    public interface IUILogger : ILog
+    {
+    }
 }
