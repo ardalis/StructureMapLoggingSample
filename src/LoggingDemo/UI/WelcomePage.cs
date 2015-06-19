@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using LoggingDemo.Core.Interfaces;
 
 namespace LoggingDemo.UI
@@ -16,11 +12,13 @@ namespace LoggingDemo.UI
         {
             _logger = logger;
             _machineInfoRepository = machineInfoRepository;
+            _logger.Log("WelcomePage created.");
         }
 
         public void Display()
         {
-            Console.WriteLine("Hello World From {0}", System.Environment.MachineName);
+            var machineInfo = _machineInfoRepository.Get();
+            Console.WriteLine("Hello World From {0}", machineInfo.Name);
         }
     }
 }

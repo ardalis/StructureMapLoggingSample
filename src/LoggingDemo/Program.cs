@@ -44,7 +44,7 @@ namespace LoggingDemo
                     scan.TheCallingAssembly();
                     scan.WithDefaultConventions();
                 });
-                For<ILog>().Use<ConsoleLogger>();
+                For<ILog>().Use(() => new ConsoleLogger("All"));
             }
         }
     }
